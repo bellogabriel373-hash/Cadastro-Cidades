@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "d73ff847-563a-46a2-b38d-b5c0f18581f8"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -35,13 +36,17 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "polyfills": [
+              "@angular/localize/init"
+            ]
           },
           "configurations": {
             "production": {
