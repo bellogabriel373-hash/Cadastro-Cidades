@@ -20,7 +20,7 @@
 
     <div class="mb-3">
       <label for="inputPrice" class="form-label">É capital?</label>
-      <input formControlName="capital" type="checkbox" class="form-check-input" style="margin-left: 10px;" id="inputPrice" cl>
+      <input formControlName="capital" type="text" class="form-control" id="inputPrice" cl>
     </div>
 
     <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
@@ -41,10 +41,14 @@
                   <span class="text-body-secondary">População</span>
                   <strong>{{ cidade.populacao }}</strong>
                 </li>
+                <li class="list-group-item d-flex justify-content-between px-0">
+                  <span class="text-body-secondary">Capital:</span>
+                  <strong>{{ cidade.capital }}</strong>
+                </li>
               </ul>
             </div>
             <div class="card-footer bg-transparent small text-body-secondary">
-              id {{ Cidades.length }}
+              id: {{ Cidades.length }}
             </div>
           </div>
         </div>
